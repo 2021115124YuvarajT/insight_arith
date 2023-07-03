@@ -25,6 +25,15 @@ const Sidenavbar = () =>{
               { label: 'Try these', link: '/place_val/try_place_val'}
             ];
           }
+          else if(currentPage === "/squar" || currentPage === '/squar/squar_intro' || currentPage==="/squar/dwanda" || currentPage==="/squar/squar_method" || currentPage === "/squar/squar_examples" || currentPage==="/squar/squar_method" || currentPage==="/squar/squar_exercises"){
+            items=[
+              {label:'Introduction',link:'/squar/squar_intro'},
+              {label:'Dwanda',link:'/squar/dwanda'},
+              {label:'The Method',link:'/squar/squar_method'},
+              {label:'Examples',link:'/squar/squar_examples'},
+              {label:'Exercises',link:'/squar/squar_exercises'}
+            ];
+          }
           setNavigationItems(items);
     } , [location.pathname])
 

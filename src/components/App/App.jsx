@@ -26,8 +26,13 @@ import Mishrank from "../place_val/Mishrank";
 import Try_pv from "../place_val/try_place_val";
 import Stepbystep from "../place_val/stepbystep";
 import More_p from "../place_val/moreproblems";
-export default function App() {
-    return (
+import Squar_intro from "../squar/squar_intro";
+import Dwanda from "../squar/dwanda"
+import Squar_method from "../squar/squar_method"
+import Squar_examples from "../squar/squar_examples";
+import Squar_exercises from "../squar/squar_exercises";
+import Squar_stepbystep from "../squar/squar_stepbystep";
+export default function App() {    return (
         <div>
             <Navbar />
                 <Routes>
@@ -54,7 +59,19 @@ export default function App() {
                     <Route path ='mul/quickrecap' element ={<Quick/>}/>
                     <Route path='/division' element={<Div />} />
                     <Route path='/divs' element={<Divs />} />
-                    <Route path='/squar' element={<Squar />} />
+
+                    <Route path='/squar' element={<Squar />} >
+                        <Route index element = {<Squar_intro/>}/>
+                        <Route path='/squar/squar_intro' element = {<Squar_intro/>}/>
+                        <Route path='/squar/dwanda'element={<Dwanda/>}/>
+                        <Route path='/squar/squar_method' element={<Squar_method/>}/>
+                        <Route path='/squar/squar_examples' element={<Squar_examples/>}/>
+                        <Route path='/squar/squar_exercises' element={<Squar_exercises/>}/>
+                    </Route>
+                    <Route path='/squar/squar_stepbystep' element={<Squar_stepbystep/>}/>
+                    
+                    
+                    
                     <Route path='/squar_root' element={<Squar_root />} />
                     <Route path='/misc' element={<Misc />} />
                     <Route path='/code' element={<Code />} />

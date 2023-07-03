@@ -1,5 +1,4 @@
 .primary-nav ul{
-    list-style-type: none;
     height:100px;
     align-items:end;
     background-color: #c0c0c0;
@@ -12,7 +11,6 @@
     justify-items: center;
     margin-left: auto;
     display: inline-block;
-    margin-bottom: 0;
     margin-left: 40%;
   }
 ul{
@@ -24,12 +22,10 @@ ul{
   .secondary-nav li {
     float: left;
     display: block;
-    list-style: none;
-    width:max-content;
     align-items:end;
     height: 60px;
     font-size:medium;
-    width:max-content;
+    
   }
   
   li a {
