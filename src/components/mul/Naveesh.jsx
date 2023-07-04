@@ -59,7 +59,7 @@ Navasesh of 24 is 6.</p>
                
                
                 </div>
-                <button onClick={()=>navigate(-1)}>Back</button>
+                <button style={{'marginLeft':'45%'}}onClick={()=>navigate(-1)}>Back</button>
             </div>
         </>
         

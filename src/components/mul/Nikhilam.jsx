@@ -25,13 +25,13 @@ export default function Nikhilam(){
                         <h4>Example 2:</h4>
                         <img src = "http://insight.sabarirb.org/Reading%20Materials/maths/arith/mul/nikhilam/examples/mulex04.gif" />
                         <h4>Special Case:</h4>
-                        <p>What if one or both the number(s) is greater than the base?</p>
+                        <NavLink to="/mul/nik_greater"><p>What if one or both the number(s) is greater than the base?</p></NavLink>
                         <h4>Example</h4>
                         <img src="http://insight.sabarirb.org/Reading%20Materials/maths/arith/mul/nikhilam/examples/mulex05.gif"/>
                         <h3>Note📝</h3>
-                        <p>The example is similar to the ones given above, but with a base 100. The only difference is that, by multiplying the last digits of the numbers, we get the last two digits of the product. In general, if we multiply two numbers which are nearer to the nth power of 10, the product of the last digits gives the last 'n' digits of the result. Note the use of 'Mishrank' in the above example. We got the product as Image23.gif (940 bytes). We replaced it as 9888.</p>
+                        <p>The example is similar to the ones given above, but with a base 100. The only difference is that, by multiplying the last digits of the numbers, we get the last two digits of the product. In general, if we multiply two numbers which are nearer to the nth power of 10, the product of the last digits gives the last 'n' digits of the result. Note the use of 'Mishrank' in the above example. We got the product as Image23.gif (940 bytes). We replaced it as 9888.<NavLink to="/mul/nik_fmexamples">Let's see a few more examples</NavLink></p>
                         <h3>Think about this❗</h3>
-                        <p>How do you multiply any numbers, which aren't close to powers of 10? The Indian methods have a solution for these too. We can use bases which are multiples of power of 10 (like 20,300, etc) or a fraction of powers of 10. Click here to view those methods.</p>
+                        <p>How do you multiply any numbers, which aren't close to powers of 10? The Indian methods have a solution for these too. We can use bases which are multiples of power of 10 (like 20,300, etc) or a fraction of powers of 10.  <NavLink to='/mul/nik_otherbase'>Click here</NavLink> to view those methods.</p>
                         <h1>Wanna try some problems?</h1>
                         <button><NavLink to="/mul/try_nikh" >click here</NavLink></button>
                         <p>check your answers using <NavLink to="/mul/Naveesh" >Naveesh</NavLink></p>

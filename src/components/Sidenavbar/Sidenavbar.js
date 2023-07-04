@@ -34,6 +34,16 @@ const Sidenavbar = () =>{
               {label:'Exercises',link:'/squar/squar_exercises'}
             ];
           }
+          else if(currentPage === '/divs' || currentPage === '/divs/divs_intro' || currentPage === "/divs/divs_how" || currentPage === "/divs/divs_exercise" || currentPage === "/divs/divs_eka" || currentPage === "/divs/divs_better" || currentPage === "/divs/divs_negative"){
+            items = [
+              {label:'Introduction',link:'/divs/divs_intro'},
+              {label:'The Ekadhika',link:"/divs/divs_eka"},
+              {label:'Negative Ekadhika',link: "/divs/divs_negative"},
+              {label:'Better Techniqes.',link:"/divs/divs_better"},
+              {label:'Exercises',link:"/divs/divs_exercise"},
+              {label:'How does it work?',link:"/divs/divs_how"}
+            ]
+          }
           setNavigationItems(items);
     } , [location.pathname])
 

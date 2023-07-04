@@ -1,11 +1,14 @@
 import React from 'react'
+import Sidenavbar from '../Sidenavbar/Sidenavbar'
+import { Outlet } from 'react-router-dom'
 const Divs = () => 
 {
   return (
     <div>
-      This is the Divs page
+      <Sidenavbar/>
+      <Outlet/>
     </div>
   )
 }
 
-export default Divs
+export default Divs;

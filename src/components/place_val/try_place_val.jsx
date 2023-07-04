@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-//import "./try_nikh.css";
 import { NavLink, useNavigate } from "react-router-dom";
-
+import dest2 from "../../images/soln2.gif";
+import dest3 from "../../images/soln3.gif";
+import dest4 from "../../images/soln4.gif";
 
 
 const questions = [
-    { id: 1, question: "1. What is the denary (base 10) equivalent of 113 to the base 13 ?", answer: 185 },
-    { id: 2, question: "2. What is the decimal equivalent of (64bar0.5bar?)base8", style:{'color':'green'}, answer: 351.375 },
-    { id: 3, question: "3.  The decimal equivalent of ()4 is 10. what is 'a'?", style: "", answer: 2 },
-    { id: 4, question: "4. Eliminate the negative digits in  ()10", style: "", answer:  29805.9 },
+    { id: 1, question: "1. What is the denary (base 10) equivalent of 113 to the base 13 ",image:"", answer: 185 },
+    { id: 2, question: "2. What is the decimal equivalent of ",image:dest2 ,answer: 351.375 },
+    { id: 3, question: "3. What is the value of 'a ' if  10 is the decimal equivalent of ",image:dest3,  answer: 2 },
+    { id: 4, question: "4. Eliminate the negative digits in ",image:dest4,answer:  29805.9 },
   ];
   
 
@@ -42,8 +43,8 @@ export default function Try_pv() {
       <div className="question_block">
       {questions.map((q, index) => (
   <div key={q.id}>
-    <p>{q.question}</p>
-    <p>{q.style && <p style={q.style}>I am rendering</p>} {/* Conditionally render the image */}</p>
+    <p>{q.question}{(q.id === 2 || q.id === 3 || q.id ===4) ? <img style={qimagestyle}src= {q.image} /> :""}{"?"}</p>
+   
     <input
       className="input_class"
       type="text"
@@ -68,4 +69,7 @@ export default function Try_pv() {
     
     </div>
   );
+}
+const qimagestyle={
+  marginLeft:'0px'
 }
