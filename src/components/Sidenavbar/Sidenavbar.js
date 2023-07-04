@@ -3,6 +3,12 @@ import { NavLink, useLocation } from 'react-router-dom';
 import "./Sidenavbar.css";
 
 const Sidenavbar = () =>{
+    const NavStyle = ({ isActive }) => {
+      return {
+            fontWeight: isActive ? 'bolder' : 'larger',
+            color: isActive ? '#F8CF50' : 'white',
+        };
+    };
     const location = useLocation();
     const [navigationItems, setNavigationItems] = useState([]);
     useEffect(
@@ -46,22 +52,19 @@ const Sidenavbar = () =>{
           }
           setNavigationItems(items);
     } , [location.pathname])
-
-return (
+  return (
     <div className="container">
       <nav className="sidebar">
         <ul className="navbar-items">
           {navigationItems.map((item,index) => (
-            <li key={index} className="navbar-item">
-              <NavLink to={item.link}>{item.label}</NavLink>
+            <li key={index} className="navbar-item" 
+            style={{backgroundColor:item.link === location.pathname ? '#111' : '',}}>
+              <NavLink style={NavStyle} to={item.link}>{item.label}</NavLink>
             </li>
           ))}
         </ul>
       </nav>
     </div>
-  );
-  // ...
-  
-    
+  );    
 };
 export default Sidenavbar;
