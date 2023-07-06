@@ -45,7 +45,7 @@ export default function More_place() {
       <button className="b" onClick={() => handleClick(2)}>Solution 2</button>
       <button  className="b" onClick={() => handleClick(3)}>Solution 3</button>
       <div>{solution && <Solution text={solution} />}</div>
-      <button className="back" onClick={()=>{navigate(-1)}}>Back</button>
+      <button className="back"  onClick={()=>{navigate(-1)}}>Back</button>
     </div>
   );
 }
