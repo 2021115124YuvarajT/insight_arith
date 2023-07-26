@@ -17,5 +17,6 @@ export default function Intro() {
     )
 }
 const ol = {
-    'marginLeft':'35%'
+    'marginLeft':'35%',
+    
 }
