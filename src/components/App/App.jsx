@@ -69,6 +69,7 @@ import Mishrank from "../place_val/Mishrank";
 import Try_pv from "../place_val/try_place_val";
 import Stepbystep from "../place_val/stepbystep";
 import More_p from "../place_val/moreproblems";
+import { Dev_Team } from "../Dev_Team/Dev_Team.jsx";
 
 export default function App(){
     return(
@@ -160,6 +161,7 @@ export default function App(){
             <Route path='/misc/how' element={<How_it_works/>}/>
         </Route>
         <Route path='/code' element={<Code/>} />
+        <Route path="/Dev_Team" element={<Dev_Team/>}/>
         <Route path='*' element={<Nomatch/>} />
     </Routes>
         </div>
