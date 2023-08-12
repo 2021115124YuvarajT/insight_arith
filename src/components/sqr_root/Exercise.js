@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import '../division/nik_div.css';
 import { useNavigate } from "react-router-dom";
+import book from '../../images/ex_book.gif'
+
 const questions_set_1=[
     { id:1,question:'1)4624',answer:68},
     { id:2,question:'2)201601',answer:449},
@@ -37,12 +39,13 @@ const Exercise = () => {
     <div class='body'>
     <h3 className="main_heading">EXERCISES</h3>
     <hr/>
-    <p>Practice makes a person perfect! Why don't you practice with these questions!</p>
+    <p><img src={book}/>Practice makes a person perfect! Why don't you practice with these questions!</p>
     <h4>Q1) Find the square root of the following   perfect squares-use mishrank wherever necessary:</h4>
     {questions_set_1.map((q,index) => (
         <div id={q.id}>
         <p>{q.question}</p>
-        <input class='input_sq_rt' placeholder='enter the square root' type='text' onChange={(e) => handleChange(e, index)} value={answers[index]}/>&nbsp;&nbsp;
+        <input class='input_sq_rt' placeholder='enter the square root' type='text' style={input_class}
+        onChange={(e) => handleChange(e, index)} value={answers[index]}/>&nbsp;&nbsp;
         <button type='show_button' onClick={()=>handleShow(index)}>SHOW ANSWERS</button>&nbsp;&nbsp;
         <button type='verify_button' onClick={()=>handleVerify(index)}>VERIFY ANSWERS</button>&nbsp;&nbsp;
         <span className="try_span" style={verifications[index]=== "Wrong" ? {'color':'red'}:{'color':'green'}}>
@@ -51,7 +54,8 @@ const Exercise = () => {
         </div>
         ))}
         <br/>
-        <hr/><button style={{'margin-left':'35%'}}onClick ={()=>navigate('/squar_root/exer_2')}>WANNA PRACTICE MORE PROBLEMS? CLICK HERE</button>
+        <br/>
+        <button style={{'margin-left':'30%'}}onClick ={()=>navigate('/squar_root/exer_2')}>WANNA PRACTICE MORE PROBLEMS? CLICK HERE</button>
         <br/>
         <hr/>
     </div>
@@ -59,3 +63,25 @@ const Exercise = () => {
 }
 
 export default Exercise
+
+const input_button = {
+    fontSize: '20px',
+    marginLeft:'20px',
+    padding: '5px',
+    width:'200px',
+    marginLeft:'50px'
+  }
+  const verify_button  = {
+  marginLeft:'50px',
+  fontSize:'20px',
+  width:'200px',
+  padding:'5px',
+  textDecoration:'none'
+  }
+  const input_class = {
+    fontSize:'large',
+    fontWeight:'bold',
+    marginLeft:'30px',
+    borderRadius:'15px',
+    textAlign:'center'
+    }

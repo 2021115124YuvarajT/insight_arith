@@ -6,7 +6,7 @@ import dest4 from "../../images/soln4.gif";
 
 
 const questions = [
-    { id: 1, question: "1. What is the denary (base 10) equivalent of 113 to the base 13 ",image:"", answer: 185 },
+    { id: 1, question: "1. What is the denary (base 10) equivalent of 125 to the base 25 ",image:"", answer: 185 },
     { id: 2, question: "2. What is the decimal equivalent of ",image:dest2 ,answer: 351.375 },
     { id: 3, question: "3. What is the value of 'a ' if  10 is the decimal equivalent of ",image:dest3,  answer: 2 },
     { id: 4, question: "4. Eliminate the negative digits in ",image:dest4,answer:  29805.9 },
@@ -38,38 +38,61 @@ export default function Try_pv() {
   }
 
  return (
-    <div className="top-most-div">
-      <h1>Try the following problems!</h1>
-      <div className="question_block">
+    <div className="body">
+      <h3 class="main_heading">Try the following problems!</h3>
+      <hr/>
       {questions.map((q, index) => (
-  <div key={q.id}>
-    <p>{q.question}{(q.id === 2 || q.id === 3 || q.id ===4) ? <img style={qimagestyle}src= {q.image} /> :""}{"?"}</p>
-   
-    <input
-      className="input_class"
-      type="text"
-      onChange={(e) => handleChange(e, index)}
-      value={answers[index]}
-    />
-    <button className="input_button" onClick={() => handleClick(index)}>
-      Show Answer
-    </button>
-    <button className="verify_button" onClick={() => handleVerify(index)}>
-      Verify
-    </button>
-    <span className="try_span" style={verification[index] === "Correct" || verification[index] === "give it a try!" ? { 'color': 'green' } : { 'color': 'red' }}>{verification[index]}</span>
-  </div>
-))} 
+        <div key={q.id}>
+          <p>{q.question}{(q.id === 2 || q.id === 3 || q.id ===4) ? <img src= {q.image} /> :""}{"?"}</p>
+        
+          <input
+           style={input_class}
+            type="text"
+            onChange={(e) => handleChange(e, index)}
+            value={answers[index]}
+          />
+          <button style={input_button} onClick={() => handleClick(index)}>
+            Show Answer
+          </button>
+          <button style={verify_button} onClick={() => handleVerify(index)}>
+            Verify
+          </button>
+          <span  style={verification[index] === "Correct" || verification[index] === "give it a try!" ? { 'color': 'green','text-decoration':'none','margin-left':'20px' } : { 'color': 'red','margin-left':'20px' }}>{verification[index]}</span>
+        </div>
+      ))} 
            <h4>Want to see step by step solution?</h4>
-            <button><NavLink to="/place_val/stepbystep">Click Here!</NavLink></button>
+            <button style={back}><NavLink style={{'text-decoration':'none'}} to="/place_val/stepbystep">Click Here!</NavLink></button>
             <h4>Wanna See some more problems?</h4>
-            <button><NavLink to="/place_val/moreproblems">Click Here!</NavLink></button>
-            <button className="back" onClick={()=>navigate(-1)}>Back</button>
-      </div>
-    
+            <button style={back}><NavLink style={{'text-decoration':'none'}} to="/place_val/moreproblems">Click Here!</NavLink></button>
+            <br/>
+            <button style={back} onClick={()=>navigate(-1)}>Back</button>
     </div>
   );
 }
-const qimagestyle={
-  marginLeft:'0px'
+const input_button = {
+    fontSize: '20px',
+    marginLeft:'20px',
+    padding: '5px',
+    width:'200px',
+    marginLeft:'50px'
+}
+const verify_button  = {
+  marginLeft:'50px',
+  fontSize:'20px',
+  width:'200px',
+  padding:'5px',
+  textDecoration:'none'
+}
+const input_class = {
+  fontSize:'large',
+  fontWeight:'bold',
+  color:'green',
+  marginLeft:'30px',
+  borderRadius:'25px',
+  textAlign:'center'
+}
+const back = {
+  marginLeft:'25%',
+  marginTop:'20px',
+  textDecoration:'none'
 }

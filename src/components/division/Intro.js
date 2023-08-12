@@ -5,7 +5,6 @@ export default function Intro() {
       <div className="body">
         <h2 class='main_heading'>Introduction to division:</h2>
         <hr/>
-        <h2></h2>
         <p>Division is one aspect of arithmetic that is regarded to be very important and equally cumbersome.</p>
         <h3>Take for example 52 ÷ 9:</h3>
         <p>Doing this by the conventional technique involves going through the 9's tables mentally, until 9 × 5 = 45.</p>

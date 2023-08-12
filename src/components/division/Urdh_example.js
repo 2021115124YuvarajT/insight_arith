@@ -2,6 +2,17 @@ import React from 'react'
 import './nik_div.css'
 import Sidenavbar from '../Sidenavbar/Sidenavbar'
 import { useNavigate } from "react-router-dom";
+import step_4 from '../../images/exam04_urdh_ex_div.gif'
+import step_3 from '../../images/exam03_urdh_ex_div.gif'
+import step_2 from '../../images/exam02_urdh_ex_div.gif'
+import step_1 from '../../images/exam01_urdh_ex_div.gif'
+import step_11 from '../../images/exam101_urdh_ex_div.gif'
+import step_12 from '../../images/exam102_urdh_ex_div.gif'
+import step_13 from '../../images/exam103_urdh_ex_div.gif'
+import step_14 from '../../images/exam104_urdh_ex_div.gif'
+import step_15 from '../../images/exam105_urdh_ex_div.gif'
+import step_16 from '../../images/exam106_urdh_ex_div.gif'
+
 const Urdh_example = () => {
   const navigate=useNavigate();
   return (
@@ -23,41 +34,41 @@ const Urdh_example = () => {
         <tr>
           <td>
             <h3>STEP 1:</h3>
-            <p class='img-wrapper'><img src='http://insight.sabarirb.org/Reading%20Materials/maths/arith/div/examples/exam04.gif'/></p>
+            <p class='img-wrapper'><img src={step_4}/></p>
           </td>
           <td>
             <h3>STEP 1:</h3>
-            <p class='img-wrapper'><img src='http://insight.sabarirb.org/Reading%20Materials/maths/arith/div/examples/exam105.gif'/></p>
+            <p class='img-wrapper'><img src={step_15}/></p>
           </td>
         </tr>
         <tr>
           <td>
             <h3>STEP 2:</h3>
-            <p class='img-wrapper'><img src='http://insight.sabarirb.org/Reading%20Materials/maths/arith/div/examples/exam03.gif'/></p>
+            <p class='img-wrapper'><img src={step_3}/></p>
           </td>
           <td>
           <h3>STEP 2:</h3>
-            <p class='img-wrapper'><img src='http://insight.sabarirb.org/Reading%20Materials/maths/arith/div/examples/exam104.gif'/></p>
+            <p class='img-wrapper'><img src={step_14}/></p>
           </td>
         </tr>
         <tr>
           <td>
             <h3>STEP 3:</h3>
-            <p class='img-wrapper'><img src='http://insight.sabarirb.org/Reading%20Materials/maths/arith/div/examples/exam02.gif'/></p>
+            <p class='img-wrapper'><img src={step_2}/></p>
           </td>
           <td>
           <h3>STEP 3:</h3>
-            <p class='img-wrapper'><img src='http://insight.sabarirb.org/Reading%20Materials/maths/arith/div/examples/exam103.gif'/></p>
+            <p class='img-wrapper'><img src={step_13}/></p>
           </td>
         </tr>
         <tr>
           <td>
             <h3>STEP 4:</h3>
-            <p class='img-wrapper'><img src='http://insight.sabarirb.org/Reading%20Materials/maths/arith/div/examples/exam01.gif'/></p>
+            <p class='img-wrapper'><img src={step_1}/></p>
           </td>
           <td>
           <h3>STEP 4:</h3>
-            <p class='img-wrapper'><img src='http://insight.sabarirb.org/Reading%20Materials/maths/arith/div/examples/exam102.gif'/></p>
+            <p class='img-wrapper'><img src={step_12}/></p>
           </td>
         </tr>
         <tr>
@@ -67,7 +78,7 @@ const Urdh_example = () => {
           </td>
           <td>
           <h3>STEP 5:</h3>
-            <p class='img-wrapper'><img src='http://insight.sabarirb.org/Reading%20Materials/maths/arith/div/examples/exam101.gif'/></p>
+            <p class='img-wrapper'><img src={step_11}/></p>
             <p>Instead of calculating the remainder,<br/>we'll proceed further to get an <br/>answer after the decimal point</p>
           </td>
         </tr>
@@ -77,11 +88,12 @@ const Urdh_example = () => {
           </td>
           <td>
           <h3>STEP 6:</h3>
-            <p class='img-wrapper'><img src='http://insight.sabarirb.org/Reading%20Materials/maths/arith/div/examples/exam106.gif'/></p>
+            <p class='img-wrapper'><img src={step_16}/></p>
           </td>
         </tr>
       </table>
-      <button className="back" onClick={()=>navigate(-1)}>Back to URDHVA TIRYAKA page</button><br/>
+      <br/>
+      <button style={{'margin-left':'30%'}}  className="back" onClick={()=>navigate(-1)}>Back to URDHVA TIRYAKA page</button><br/>
       <br/>
     </div>
   </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./moreproblems.css";
+import '../code/Code.css'
 import { useNavigate } from "react-router-dom";
 
 export default function More_place() {
@@ -24,28 +24,30 @@ export default function More_place() {
   
 
   return (
-    <div>
-      <h1>Get Ready for some more exercise!!!</h1>
-      <div className="question">
-        <h4>1. Eliminate the digits greater than half the base from 84679 (base 10).</h4>
+    <div className="content-body">
+      <h3 class='main_heading'>STEP BY STEP SOLUTION</h3>
+      <hr/>
+      <h3>Get Ready for some more exercise!!!</h3>
+      <div style={question}>
+        <p>1. Eliminate the digits greater than half the base from 84679 (base 10).</p>
       </div>
-      <div className="question">
-        <h4>
+      <div style={question}>
+        <p>
           2. Given that 'b' is the base, d=b-a and e=b-c-1, what is the remainder when 81<span className="bar">a</span>3
-          <span className="bar">c</span>2 is divided by 80d2e0?
-        </h4>
+          <span style={bar}>c</span>2 is divided by 80d2e0?
+        </p>
       </div>
-      <div className="question">
-        <h4>
+      <div style={question}>
+        <p>
           3. 'n' being a positive integer, how many digits will be there in a base 'n' representation of a number if the
           base 'n2' representation had 1947 digits?
-        </h4>
+        </p>
       </div>
-      <button className="b"onClick={() => handleClick(1)}>Solution 1</button>
-      <button className="b" onClick={() => handleClick(2)}>Solution 2</button>
-      <button  className="b" onClick={() => handleClick(3)}>Solution 3</button>
+      <button style={b} onClick={() => handleClick(1)}>Solution 1</button>
+      <button style={b} onClick={() => handleClick(2)}>Solution 2</button>
+      <button  style={b} onClick={() => handleClick(3)}>Solution 3</button>
       <div>{solution && <Solution text={solution} />}</div>
-      <button className="back"  onClick={()=>{navigate(-1)}}>Back</button>
+      <button style={back} onClick={()=>{navigate(-1)}}>Back</button>
     </div>
   );
 }
@@ -54,3 +56,21 @@ function Solution({ text }) {
     return <div className="solution" dangerouslySetInnerHTML={{ __html: text }} />;
   }
   
+const bar = {
+  textDecoration:'overline'
+}
+const question = {
+  fontSize:'x-large'
+}
+const solution = {
+  fontSize:'x-large',
+  marginLeft:'50px'
+}
+const b  = {
+  marginLeft:'50px',
+  padding:'10px',
+  borderRadius:'10px'
+}
+const back = {
+  marginLeft:'45%'
+}

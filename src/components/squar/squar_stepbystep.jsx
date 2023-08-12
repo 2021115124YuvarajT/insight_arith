@@ -70,7 +70,8 @@ function Squar_stepbystep() {
     const navigate=useNavigate();
   return (
     <div>
-    <h1 style={{'color':'green'}}>Solutions for the exercise:</h1>
+    <h1 style={title}>Solutions for the exercise</h1>
+    <hr/>
       {equations.map((equation, index) => (
         <div key={index} style={{'font-size':'x-large'}}>
             <h4>{equation.qno}){" "+equation.number}<sup>2</sup></h4>
@@ -103,18 +104,20 @@ function Squar_stepbystep() {
               </tr>
             </tbody>
           </table>
-          {equation.number=='327.8' ? <p>What we require is 327.82 . Hence place a decimal point two positions from the right. So, 327.82 = 107452.84</p> : ""}
+          {equation.number=='327.8' ? <p>What we require is 327.82 . Hence place a decimal point two positions from the right. So, 327.8<sup>2</sup> =<b>107452.84</b> </p> : ""}
           {index < equations.length - 1 && <hr style={separatorStyle} />}
         </div>
       ))}
-      <button style={Buttonstyle} onClick={()=>navigate(-1)}>Back</button>
+      <div style={buttonstyle}>
+      <button  onClick={()=>navigate(-1)}>Back to exercise</button>
+      </div>
     </div>
   );
 }
 
 const tableStyle = {
   borderCollapse: 'collapse',
-  marginLeft:'200px'
+  marginLeft:'20px'
 };
 
 const numberStyle = {
@@ -144,9 +147,12 @@ const separatorStyle = {
   borderTop: '2px solid red',
   marginTop: '20px',
 };
-const Buttonstyle = {
-    marginLeft:'500px',
+const buttonstyle = {
+   textAlign:'center',
     marginTop:'20px'
 }
-
+const title = {
+  color:'green',
+  textAlign:'center'
+}
 export default Squar_stepbystep;

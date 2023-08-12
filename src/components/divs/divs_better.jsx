@@ -1,6 +1,7 @@
+import "../division/nik_div.css"
 export default function Divs_better(){
     return(
-        <div style={topcontainer}>
+        <div className="body">
             <h1>Bigger Divisors - Better Techniques</h1>
             <p>The cases encountered so far had dealt only with small divisors and hence small osculators. However there are techniques to deal with bigger numbers. The bigger divisors can be grouped under 2 categories.</p>
             <h3>1) Divisors Having A Regularity:</h3>

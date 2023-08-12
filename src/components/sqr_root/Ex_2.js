@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import '../division/nik_div.css';
 import { useNavigate } from "react-router-dom";
 import Sidenavbar from '../Sidenavbar/Sidenavbar';
+import book from '../../images/ex_book.gif'
 
 const questions_set_2=[
     { id:1,question:'1)107',answer:10.344},
@@ -40,22 +41,26 @@ const Ex_2 = () => {
             <div class='body'>
             <h3 className="main_heading">EXERCISES PART - 2</h3>
             <hr/>
-            <h4>Try these too!</h4>
+            <h4><img src={book}/>Try these too!</h4>
             <h4>Q2)Find the square root of the following numbers up to 3 decimal places (use mishrank wherever necessary):</h4>
             {questions_set_2.map((q,index) => (
             <div id={q.id}>
             <p>{q.question}</p>
-            <input class='input_sq_rt' placeholder='enter the square root' type='text' onChange={(e) => handleChange(e, index)} value={answers[index]}/>&nbsp;&nbsp;
-            <button type='show_button' onClick={()=>handleShow(index)}>SHOW ANSWERS</button>&nbsp;&nbsp;
-            <button type='verify_button' onClick={()=>handleVerify(index)}>VERIFY ANSWERS</button>&nbsp;&nbsp;
-            <span className="try_span" style={verifications[index]=== "Wrong" ? {'color':'red'}:{'color':'green'}}>
+            <input class='input_sq_rt' placeholder='enter the square root' type='text' style={input_class}
+            onChange={(e) => handleChange(e, index)} value={answers[index]}/>
+            <button type='show_button' style={input_button} onClick={()=>handleShow(index)}>SHOW ANSWERS</button>
+            <button type='verify_button' style={verify_button} onClick={()=>handleVerify(index)}>VERIFY ANSWERS</button>&nbsp;&nbsp;
+            <span className="try_span"
+            style={verifications[index]=== "Wrong" ? {'color':'red'}:{'color':'green'}}>
                 {verifications[index]}
             </span>
             </div>
             ))}<br/>
             <hr/>
+            <br/>
             <button style={{'margin-left':'13%'}} onClick ={()=>navigate('/squar_root')}>BACK TO BASICS OF SQUARE ROOT</button>&nbsp;&nbsp;
             <button onClick ={()=>navigate(-1)}>BACK TO WHERE YOU LEFT</button>
+            <br/>
             <br/>
             <hr/>
         </div>
@@ -64,3 +69,25 @@ const Ex_2 = () => {
 }
 
 export default Ex_2
+
+const input_button = {
+    fontSize: '20px',
+    marginLeft:'20px',
+    padding: '5px',
+    width:'200px',
+    marginLeft:'50px'
+  }
+  const verify_button  = {
+  marginLeft:'50px',
+  fontSize:'20px',
+  width:'200px',
+  padding:'5px',
+  textDecoration:'none'
+  }
+  const input_class = {
+    fontSize:'large',
+    fontWeight:'bold',
+    marginLeft:'30px',
+    borderRadius:'15px',
+    textAlign:'center'
+    }

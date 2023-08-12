@@ -1,12 +1,20 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Sidenavbar from '../Sidenavbar/Sidenavbar';
 
 
 const Misc = () => {
   return (
-    <div>
-      <div>this is the Miscing page</div>
-    </div>
+     <div>
+     <Sidenavbar/>
+     <Outlet/>
+   </div>
   );
 };
 
 export default Misc;
+
+
+
+
+

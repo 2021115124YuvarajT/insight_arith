@@ -1,6 +1,7 @@
+import "../division/nik_div.css"
 export default function Divs_negative(){
     return(
-        <div style={topcontainer}>
+        <div className="body">
             <h1 style={title}>The Principle of Negative Osculation</h1>
             <p>Just as Ekadhika is used for testing for divisibility, a negative osculator can be used in place of Ekadhika, to test for divisibility when the Ekadhika becomes huge. To avoid confusion, This "Negative" Ekadhika can be denoted by   Q.</p>
             <h3>The Rules are:-</h3>
@@ -45,7 +46,8 @@ const topcontainer={
     fontSize:'x-large'
 }
 const title={
-    textDecoration:'underline'
+    textDecoration:'underline',
+    textAlign:'center'
 }
 const look={
     color:'blue'

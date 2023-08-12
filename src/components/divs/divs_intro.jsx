@@ -1,9 +1,10 @@
 import React from 'react';
-
+import "../division/nik_div.css"
 function Divs_intro() {
   return (
-    <div style={toptop}>
+    <div className='body '>
       <h2 style={{'margin-top':'0px','text-align':'center'}}>Divisibility Check</h2>
+      <hr/>
       <p>
         How can 11 apples be divided equally among 4 people without cutting the apples?
       </p>
@@ -51,6 +52,6 @@ const Backgroun ={
 }
 const toptop = {
     fontSize:'x-large',
-    marginLeft:'220px'
+    
 }
 export default Divs_intro;

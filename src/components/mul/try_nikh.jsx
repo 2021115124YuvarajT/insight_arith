@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./try_nikh.css";
 import { useNavigate } from "react-router-dom";
-
+import '../code/Code.css';
 const questions = [
   { id: 1, question: "1. 1.9 x 8", answer: 15.2 },
   { id: 2, question: "2. 12 x 9", answer: 108 },
@@ -37,30 +36,58 @@ export default function TryN() {
   }
 
   return (
-    <div className="top-most-div">
-      <h1>Try the following problems!</h1>
-      <div className="question_block">
+    <div className="content-body">
+        <h3 class='main_heading'>Try the following problems!</h3>
+        <hr/>
+      <div>
         {questions.map((q, index) => (
           <div key={q.id}>
             <p>{q.question}</p>
             <input
-              className="input_class"
+              style={input_class}
               type="text"
               onChange={(e) => handleChange(e, index)}
               value={answers[index]}
             />
-            <button className="input_button" onClick={() => handleClick(index)}>
+            <button style={input_button} onClick={() => handleClick(index)}>
               Show Answer
             </button>
-            <button className="verify_button" onClick={() => handleVerify(index)}>
+            <button style={verify_button} onClick={() => handleVerify(index)}>
               Verify
             </button>
-            <span className="try_span" style={verification[index]=== "Correct"|| verification[index]==="give it a try!" ? {'color':'green'}:{'color':'red'}}>{verification[index]}</span>
+            <span className="try_span" style={verification[index]=== "Correct"|| verification[index]==="give it a try!" ? {'color':'green','marginLeft':'20px'}:{'color':'red'}}>{verification[index]}</span>
           </div>
         ))}
-            <button className="back" onClick={()=>navigate(-1)}>Back</button>
+            <button style={back} onClick={()=>navigate(-1)}>Back to nikhilam</button>
       </div>
     
     </div>
   );
+}
+const input_button = {
+  fontSize: '20px',
+  marginLeft:'20px',
+  padding: '5px',
+  width:'200px',
+  marginLeft:'50px'
+}
+const verify_button  = {
+marginLeft:'50px',
+fontSize:'20px',
+width:'200px',
+padding:'5px',
+textDecoration:'none'
+}
+const input_class = {
+fontSize:'large',
+fontWeight:'bold',
+color:'green',
+marginLeft:'30px',
+borderRadius:'25px',
+textAlign:'center'
+}
+const back = {
+marginLeft:'25%',
+marginTop:'20px',
+textDecoration:'none'
 }

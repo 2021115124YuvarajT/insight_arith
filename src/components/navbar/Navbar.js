@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <nav className='wrapper'>
             <nav className='primary-nav'>
-                <ul >
+                <ul>
                     <li><img src={logo} alt='Insight Logo' /></li>
                     <li>
                         <p class='tagline'>Essence of Indian Traditional Science and Math</p>
@@ -30,7 +30,7 @@ const Navbar = () => {
                     <li><NavLink style={NavStyle} to='/squar'>SQUARRING</NavLink></li>
                     <li><NavLink style={NavStyle} to='/squar_root'>SQUARE ROOT</NavLink></li>
                     <li><NavLink style={NavStyle} to='/code'>INDIAN NUMERIC CODE</NavLink></li>
-                    <li><NavLink style={NavStyle} to='/misc'>MISCELLANOUS EQUATION</NavLink></li>
+                    <li><NavLink style={NavStyle} to='/misc'>MISCELLANOUS </NavLink></li>
                 </ul>
             </nav>
         </nav>

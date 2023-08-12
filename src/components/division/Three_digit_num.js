@@ -2,6 +2,8 @@ import React from 'react'
 import './nik_div.css'
 import Sidenavbar from '../Sidenavbar/Sidenavbar'
 import { useNavigate } from "react-router-dom";
+import ex_1 from '../../images/ex1_3_digit_num.gif'
+
 const Three_digit_num = () => {
   const navigate=useNavigate();
   return (
@@ -17,9 +19,9 @@ const Three_digit_num = () => {
         Then add it to the tens digit To get the second digit of the quotient.
         Add the digit obtained in the previous step to the units digit of the divisor to get the remainder.(e.g.)
         </p>
-        <p class='img-wrapper'><img src='http://insight.sabarirb.org/Reading%20Materials/maths/arith/div/images/ex1.gif'/></p>
+        <p class='img-wrapper'><img src={ex_1}/></p>
         <p>This method can be extended for divisors with any number of digits.</p>
-        <button className="back" onClick={()=>navigate(-1)}>Back to NIKILAM page</button><br/>
+        <button style={{'margin-left':'35%'}} className="back" onClick={()=>navigate(-1)}>Back to NIKILAM page</button><br/>
         </div>
         <br/>
     </div>

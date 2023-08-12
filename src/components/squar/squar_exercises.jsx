@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-//import "./try_nikh.css";
 import { NavLink } from "react-router-dom";
-
+import "../division/nik_div.css"
 
 
 const questions = [
@@ -37,34 +36,66 @@ export default function Try_pv() {
   }
 
  return (
-    <div className="top-most-div">
-      <h1>Try the following problems!</h1>
+    <div className="body">
+      <h2 className="main_heading">Try the following problems!</h2>
+      <hr/>
 
       <div className="question_block">
       {questions.map((q, index) => (
   <div key={q.id}>
     <p>{q.question}</p>
-    {/*<p>{q.style && <p style={q.style}></p>} {/* Conditionally render the image </p>*/}
+    
     <input
-      className="input_class"
+      style={input_class}
       type="text"
       onChange={(e) => handleChange(e, index)}
       value={answers[index]}
     />
-    <button className="input_button" onClick={() => handleClick(index)}>
+    <button style={input_button} onClick={() => handleClick(index)}>
       Show Answer
     </button>
-    <button className="verify_button" onClick={() => handleVerify(index)}>
+    <button style={verify_button}onClick={() => handleVerify(index)}>
       Verify
     </button>
-    <span className="try_span" style={verification[index] === "Correct" || verification[index] === "give it a try!" ? { 'color': 'green' } : { 'color': 'red' }}>{verification[index]}</span>
+    <span style={verification[index] === "Correct" || verification[index] === "give it a try!" ? { 'color': 'green' } : { 'color': 'red' }}>{verification[index]}</span>
   </div>
 ))} 
         <h4>Here you go for the step by step solution for above questions!</h4>
+        <div style={buttonstyle}>
         <button><NavLink to="/squar/squar_stepbystep">Click here!</NavLink></button>
-            
+            </div>
       </div>
     
     </div>
   );
+}
+const input_button = {
+  fontSize: '20px',
+  marginLeft:'20px',
+  padding: '5px',
+  width:'200px',
+  marginLeft:'50px'
+}
+const verify_button  = {
+marginLeft:'50px',
+fontSize:'20px',
+width:'200px',
+padding:'5px',
+textDecoration:'none'
+}
+const input_class = {
+fontSize:'large',
+fontWeight:'bold',
+color:'green',
+marginLeft:'30px',
+borderRadius:'25px',
+textAlign:'center'
+}
+const back = {
+marginLeft:'25%',
+marginTop:'20px',
+textDecoration:'none'
+}
+const buttonstyle={
+  textAlign:'center'
 }

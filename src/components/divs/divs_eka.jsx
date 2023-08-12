@@ -1,6 +1,7 @@
+import "../division/nik_div.css"
 export default function Div_eka(){
     return(
-        <div style={{'font-size':'x-large','margin-left':'220px'}}>
+        <div className="body">
             <h1 style={{'font-style':'calibri','text-align':'center','margin-top':'0px'}}>Rules For Determining Ekadhikas</h1>
             <p>Given below are the rules to determine the Ekadhikas of various numbers. For convenience Ekadhikas can be denoted by "P"</p>
             <ol style={Olist}>

@@ -1,6 +1,7 @@
 import React from 'react'
 import './nik_div.css'
 import { NavLink } from 'react-router-dom'
+import exo_1 from '../../images/exo_div_nik_1.gif'
 
 const Nikilam = () => {
   return (
@@ -42,7 +43,7 @@ const Nikilam = () => {
         </ol>
         <h3>An Example:</h3>
         <p>77 ÷ 9 :</p>
-        <p class='img-wrapper'><img src = 'http://insight.sabarirb.org/Reading%20Materials/maths/arith/div/images/exo1.gif'/></p>
+        <p class='img-wrapper'><img src = {exo_1}/></p>
        
         <h3>Think about this❗</h3>
         <p> &#9755;	<NavLink style={{textAlign: 'left',color: 'black'}} to = "/division/3_digit_num">How do we divide 3 digit numbers ? </NavLink></p>

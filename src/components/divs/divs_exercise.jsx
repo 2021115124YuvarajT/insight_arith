@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import "../division/nik_div.css"
 const Questions = [
   { no:'1',
     question: 'Is 4008 divisible by 13?',
@@ -33,7 +33,7 @@ const Divs_exercise = () => {
   };
 
   return (
-    <div style={topcontainer}>
+    <div className='body'>
     <h1>Try these out!⬇️</h1>
       {Questions.map((question, index) => (
         <div key={index}>

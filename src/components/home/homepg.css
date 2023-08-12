@@ -14,17 +14,18 @@
     word-spacing: 5%;
     font-size: bolder;
 }
+
 .home-ul{
     background-color: #F8CF50;
     margin-top:40px;
     margin-left:20px;
 }
+
 .home-img{
     margin-top:5px;
     height: 225px;
     width: 225px;
     float: left;
-    margin-left:0px;
 }
 
 .credits{
@@ -32,6 +33,7 @@
     margin-top:20%;
     max-height: 120px;
 }
+
 .credit-p{
     display: inline;
     width:fit-content;
@@ -40,6 +42,7 @@
     color:#F8CF50;
     padding-top: 20% ;
 }
+
 .credit-p1{
     display: inline;
     background-color: #F8CF50;

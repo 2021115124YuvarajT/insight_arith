@@ -1,6 +1,8 @@
+import "../division/nik_div.css"
+
 export default function Divs_how() {
     return (
-        <div style={topcontainer}>
+        <div className="body">
             <h2>How does this method work?</h2>
             <p>Let the base of the numbers we consider be 'b'. Let us call the number whose divisibility is to be tested as 'n'. Let the divisor be 'd' and the ekadhika be 'e'. Then,</p>
             <div style={formuladiv}>

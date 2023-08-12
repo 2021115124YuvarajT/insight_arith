@@ -71,8 +71,10 @@ const Exercise2 = () => {
         {questions_set_1.map((q,index) => (
             <div key={q.id}>
             <p>{q.question}</p>
-            <input placeholder='enter quotient' className="input_q" type="text" onChange={(e) => handleChangequotient(e, index)} value={quotients[index]}/>&nbsp;&nbsp;
-            <input placeholder='enter remainder' className="input_r" type="text" onChange={(e) => handleChangeremainder(e, index)} value={remainders[index]}/>&nbsp;&nbsp;
+            <input placeholder='enter quotient' className="input_q" type="text" style={input_class}
+            onChange={(e) => handleChangequotient(e, index)} value={quotients[index]}/>&nbsp;&nbsp;
+            <input placeholder='enter remainder' className="input_r" type="text" style={input_class}
+             onChange={(e) => handleChangeremainder(e, index)} value={remainders[index]}/>&nbsp;&nbsp;
             <button className="input_button" onClick={() => handleShow(index)}>Show Answer</button>&nbsp;&nbsp;
             <button className="verify_button" onClick={() => handleVerify(index)}>Verify Answer</button>&nbsp;&nbsp;
             <span className="try_span" style={verifications[index]=== "Wrong" ? {'color':'red'}:{'color':'green'}}>
@@ -86,17 +88,20 @@ const Exercise2 = () => {
         {questions_set_2.map((q,index) => (
             <div key={q.id}>
             <p>{q.question}</p>
-            <input placeholder='enter quotient' className="input_q" type="text" onChange={(e) => handleChangequotient(e, index)} value={quotients[index]}/>&nbsp;&nbsp;
-            <button className="input_button" onClick={() => handleShow_2(index)}>Show Answer</button>&nbsp;&nbsp;
-            <button className="verify_button" onClick={() => handleVerify_2(index)}>Verify Answer</button>&nbsp;&nbsp;
+            <input placeholder='enter quotient' className="input_q" type="text" 
+            onChange={(e) => handleChangequotient(e, index)} value={quotients[index]}/>
+            <button className="input_button" style={input_button} onClick={() => handleShow_2(index)}>Show Answer</button>
+            <button className="verify_button" style={verify_button} onClick={() => handleVerify_2(index)}>Verify Answer</button>&nbsp;&nbsp;
             <span className="try_span" style={verifications[index]=== "Wrong" ? {'color':'red'}:{'color':'green'}}>
                 {verifications[index]}
             </span>
             </div>
             ))}
             <br/><hr/>
+            <br/>
             <button style={{'margin-left':'13%'}}onClick ={()=>navigate('/division')}>BACK TO BASICS OF DIVISION</button>&nbsp;&nbsp;
             <button onClick ={()=>navigate(-1)}>BACK TO WHERE YOU LEFT</button>
+            <br/>
             <br/>
             <hr/>
     </div>
@@ -107,3 +112,25 @@ const Exercise2 = () => {
 };
 
 export default Exercise2;
+
+const input_class = {
+  fontSize:'large',
+  fontWeight:'bold',
+  marginLeft:'25px',
+  borderRadius:'15px',
+  textAlign:'center'
+  }
+const input_button = {
+  fontSize: '20px',
+  marginLeft:'20px',
+  padding: '5px',
+  width:'200px',
+  marginLeft:'50px'
+}
+const verify_button  = {
+marginLeft:'50px',
+fontSize:'20px',
+width:'200px',
+padding:'5px',
+textDecoration:'none'
+}

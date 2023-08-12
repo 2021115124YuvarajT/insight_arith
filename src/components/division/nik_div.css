@@ -51,6 +51,11 @@ td text{
 {
     text-align: center;
 }
+.r-center-para
+{
+    text-align: center;
+    color:red;
+}
 .complement
 {
     text-decoration: overline;
@@ -79,3 +84,14 @@ button:hover {
   .try_span {
     font-weight: bold;
   }
+.bold
+{
+    font-size: x-large;
+    font-weight: bold;
+}
+.r-center-parap
+{
+    text-align: center;
+    color:red;
+    text-decoration: underline;
+}

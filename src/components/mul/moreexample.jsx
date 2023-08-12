@@ -1,7 +1,6 @@
-import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { NavLink , useNavigate } from "react-router-dom";
 import moreeg from "../../images/mul_moreexample1.gif"
-import "./moreexample.css"
+import '../division/nik_div.css'
 export default function More(){
     const navigate=useNavigate();
     return(

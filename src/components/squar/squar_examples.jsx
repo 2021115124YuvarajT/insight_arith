@@ -1,10 +1,12 @@
 import dest1 from "../../images/example1videosquar.mp4"
 import dest2 from "../../images/ex_squar2.mp4"
 import dest3 from "../../images/ex_squar3.mp4"
+import "../division/nik_div.css"
 export default function Squar_examples() {
     return (
-        <div style={{ 'font-size':'x-large','width': '1200px', 'margin-left': '200px' }}>
-            <h1>EXAMPLES</h1>
+        <div className="body">
+            <h2 className="main_heading">EXAMPLES</h2>
+            <hr/>
             <h3>Time to explore the visual examples❗❗</h3>
             <h3>Example 1:</h3>
             <video style={videostyle}controls width="640" height="360">

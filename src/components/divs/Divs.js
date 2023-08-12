@@ -4,11 +4,17 @@ import { Outlet } from 'react-router-dom'
 const Divs = () => 
 {
   return (
-    <div>
+    <div >
       <Sidenavbar/>
-      <Outlet/>
+      <div>
+      <Outlet />
+      </div>
     </div>
   )
 }
 
 export default Divs;
+const topcontainer={
+  marginLeft:'250px',
+  marginTop:'0px'
+}
