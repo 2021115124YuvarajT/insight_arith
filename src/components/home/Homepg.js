@@ -1,8 +1,9 @@
 import React from 'react';
 import "./homepg.css";
+import { useNavigate } from 'react-router-dom';
 export default function Homepg()
 {
-
+    const navigate = useNavigate();
     return(
         <div> 
             <div className="main-container-Home">
@@ -28,7 +29,7 @@ export default function Homepg()
                 </div>
                 <div className="credits">
                 <p class="credit-p">Department of IST & CSE, College of Engineering, Guindy, Anna University Chennai</p>
-                <button class ="credit-p1">code contribution</button>
+                <button class ="credit-p1" onClick={()=>navigate('/Dev_Team')}>Tech Team</button>&nbsp;&nbsp;
                 </div>
             </div>
         </div>

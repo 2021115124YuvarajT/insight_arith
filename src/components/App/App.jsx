@@ -69,6 +69,10 @@ import Mishrank from "../place_val/Mishrank";
 import Try_pv from "../place_val/try_place_val";
 import Stepbystep from "../place_val/stepbystep";
 import More_p from "../place_val/moreproblems";
+<<<<<<< HEAD
+=======
+import { Dev_Team } from "../Dev_Team/Dev_Team.jsx";
+>>>>>>> 8fa3e7c7b446831aa7f5fd2162cb2d563f2cd046
 
 export default function App(){
     return(
@@ -160,6 +164,10 @@ export default function App(){
             <Route path='/misc/how' element={<How_it_works/>}/>
         </Route>
         <Route path='/code' element={<Code/>} />
+<<<<<<< HEAD
+=======
+        <Route path="/Dev_Team" element={<Dev_Team/>}/>
+>>>>>>> 8fa3e7c7b446831aa7f5fd2162cb2d563f2cd046
         <Route path='*' element={<Nomatch/>} />
     </Routes>
         </div>

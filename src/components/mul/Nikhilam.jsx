@@ -4,7 +4,11 @@ import Nikimg1 from "../../images/nikimg1.gif"
 import Nikimg2 from "../../images/nikimg2.gif" 
 import Nikimg3 from "../../images/nikimg3.gif" 
 import Nikimg4 from "../../images/nikimg4.gif" 
+<<<<<<< HEAD
 
+=======
+import Nikimg5 from "../../images/nikimg5.gif"
+>>>>>>> 8fa3e7c7b446831aa7f5fd2162cb2d563f2cd046
 export default function Nikhilam(){
     return(
         <div className="body">
@@ -30,7 +34,11 @@ export default function Nikhilam(){
         <h4>Special Case:</h4>
         <NavLink to="/mul/nik_greater"><p>What if one or both the number(s) is greater than the base?</p></NavLink>
         <h4>Example</h4>
+<<<<<<< HEAD
         <img style={image}src="http://insight.sabarirb.org/Reading%20Materials/maths/arith/mul/nikhilam/examples/mulex05.gif"/>
+=======
+        <img style={image}src={Nikimg5}/>
+>>>>>>> 8fa3e7c7b446831aa7f5fd2162cb2d563f2cd046
         <h3>Note📝</h3>
         <p>The example is similar to the ones given above, but with a base 100. The only difference is that, by multiplying the last digits of the numbers, we get the last two digits of the product. In general, if we multiply two numbers which are nearer to the nth power of 10, the product of the last digits gives the last 'n' digits of the result. Note the use of 'Mishrank' in the above example. We got the product as Image23.gif (940 bytes). We replaced it as 9888.<NavLink to="/mul/nik_fmexamples">Let's see a few more examples</NavLink></p>
         <h3>Think about this❗</h3>
